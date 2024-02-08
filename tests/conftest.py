@@ -18,7 +18,7 @@ def mobile_browser(request):
 
 
 @pytest.fixture(params=[(1920, 1080), (1366, 768), (1600, 900), (800, 480), (480, 360), (896, 414)])
-def skip_browser(request):
+def detect_browser(request):
     browser.config.base_url = "https://github.com"
     width, height = request.param
     browser.config.window_width = width
